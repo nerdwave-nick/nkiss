@@ -1,0 +1,11 @@
+[Plymouth Theme]
+Name=nkiss
+Description=nkiss default splash screen.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/nkiss
+ScriptFile=/usr/share/plymouth/themes/nkiss/nkiss.script
+ConsoleLogBackgroundColor=0x2a273f
+MonospaceFont=Cantarell 11
+Font=Cantarell 11
