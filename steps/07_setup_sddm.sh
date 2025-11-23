@@ -6,12 +6,12 @@ sudo mkdir -p /etc/sddm.conf.d
 
 echo_g ":: set up desktop file for niri"
 sudo mkdir -p /usr/share/wayland-sessions
-if [ ! -f /usr/share/wayland-sessions/niri-uwsm.desktop ]; then
-  sudo tee /usr/share/wayland-sessions/niri-uwsm.desktop >/dev/null <<'DESKTOP'
+if [ ! -f /usr/share/wayland-sessions/niri.desktop ]; then
+  sudo tee /usr/share/wayland-sessions/niri.desktop >/dev/null <<'DESKTOP'
 [Desktop Entry]
-Name=Niri UWSM 
-Comment=Start Niri via UWSM
-Exec=uwsm start -- niri --session
+Name=Niri
+Comment=Start a niri session
+Exec=niri-session
 Type=Application
 DesktopNames=niri
 DESKTOP
@@ -22,7 +22,7 @@ if [ ! -f /etc/sddm.conf.d/autologin.conf ]; then
   cat <<EOF | sudo tee /etc/sddm.conf.d/autologin.conf
 [Autologin]
 User=$USER
-Session=niri-uwsm
+Session=niri
 
 [Theme]
 Current=breeze

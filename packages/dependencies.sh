@@ -15,7 +15,6 @@ polkit-gnome
 qt5-wayland
 sddm
 ufw
-uwsm
 wf-recorder
 wiremix
 wireplumber
