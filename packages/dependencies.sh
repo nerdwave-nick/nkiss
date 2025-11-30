@@ -1,3 +1,4 @@
+base-devel
 bluez
 bluez-utils
 brightnessctl
