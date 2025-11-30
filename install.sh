@@ -10,13 +10,11 @@ source ./lib/colors.sh
 source ./lib/errors.sh
 source ./lib/install_packages.sh
 
+source ./lib/logo.sh
+
 source ./steps/00_check_compatibility.sh
 source ./steps/01_install_requirements.sh
 source ./steps/02_install_yay.sh
-
-source ./lib/logo.sh
-gum confirm "Ready to install nkiss? [Y/n]" || exit 0
-
 source ./steps/03_disable_mkinitcpio_hooks.sh
 source ./steps/04_configure_pacman.sh
 source ./steps/05_install_packages.sh
@@ -29,4 +27,5 @@ source ./steps/11_reactivate_mkinitcpio_hooks.sh
 source ./steps/12_update_limine.sh
 source ./steps/13_setup_ufw.sh
 
+source ./lib/logo.sh
 echo_s ":: nkiss installation is complete!"
