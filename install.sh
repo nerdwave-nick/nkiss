@@ -14,7 +14,7 @@ clear
 source ./lib/logo.sh
 
 source ./steps/00_check_compatibility.sh
-source ./steps/01_install_yay.sh
+source ./steps/01_install_deps.sh
 source ./steps/02_disable_mkinitcpio_hooks.sh
 source ./steps/03_configure_pacman.sh
 source ./steps/04_install_packages.sh

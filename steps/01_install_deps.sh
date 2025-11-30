@@ -16,4 +16,13 @@ else
     echo_s ":: yay installed successfully"
 fi
 
-
+echo_i ":: installing and setting up rustup"
+if sudo pacman -Qs rustup; then
+    echo_s ":: rustup is already installed!"
+else
+    sudo pacman -S --noconfirm --needed rustup
+    echo_g ":: rustup installed successfully"
+    echo_g ":: setting up default toolchain"
+    rustup default stable
+    echo_s ":: rustup set up"
+fi
