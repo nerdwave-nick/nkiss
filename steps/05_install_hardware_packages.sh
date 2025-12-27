@@ -12,15 +12,6 @@ else
 
     echo_g ":: hardware packages installed"
 
-    echo_g ":: doing post-install setup for hardware-specific packages"
-
-    # if intel cpu present and thermald installed, start service
-    if pacman -Qi thermald &> /dev/null; then
-        echo_g ":: enabling intel thermald service"
-        sudo systemctl enable thermald
-    fi
-
-
     # nvidia specific stuff if needed
     if pacman -Qi nvidia-utils &> /dev/null; then
         echo_g ":: setting up nvidia services"

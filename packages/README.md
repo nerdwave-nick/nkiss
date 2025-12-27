@@ -6,7 +6,6 @@ Hardware Specific Packages
 | General | common     | linux-firmware      | firmware for hardware                                        |
 | CPU     | amd cpu    | amd-ucode           | microcode updates for AMD CPUs                               |
 |         | intel cpu  | intel-ucode         | microcode updates for Intel CPUs                             |
-|         |            | thermald            | intel cpu necessity for temperature control                  |
 | GPU     | common     | mesa                | provides OpenGL implementation                               |
 |         |            | vulkan-icd-loader   | required to load Vulkan drivers.                             |
 |         |            | libva               | provides VAAPI implementation                                |
@@ -28,6 +27,9 @@ Hardware Specific Packages
 Additional Notes
 ----------------
 
-For thermald, we also need to run `systemctl enable thermald.service` to start it at boot.
-
 For nvidia GPUs we'll also run a bunch of services to ensure no freezez/crashes on suspend/resume.
+
+Things to do after
+------------------
+
+Hardware is very individual, so this won't be a perfect setup. You may need to install thermald for some intel cpus, tlp for others, or if you don't have a laptop you might want to look into other things. TLP will also be useful for battery control on most hardware, but some (for example Acer notebooks) don't work with it. Basically **RTFM**.
