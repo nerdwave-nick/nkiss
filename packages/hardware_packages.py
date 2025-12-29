@@ -146,7 +146,6 @@ class HardwareDetector:
     def _handle_amd(self, device_id: str, pkgs: set):
         pkgs.add("vulkan-radeon")
         pkgs.add("libva-mesa-driver")
-        pkgs.add("mesa-vdpau")
         pkgs.add("libvdpau-va-gl")
 
 
