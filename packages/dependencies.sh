@@ -22,3 +22,4 @@ xdg-desktop-portal-gnome
 niri
 xwayland-satellite
 alacritty
+fuzzel
