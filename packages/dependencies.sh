@@ -10,7 +10,12 @@ man
 plymouth
 sddm
 ufw
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
 wireplumber
+wiremix
 wl-clipboard
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gnome
