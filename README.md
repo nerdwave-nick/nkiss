@@ -10,20 +10,20 @@ Hardware setup is documented here [DRIVERS.md](docs/DRIVERS.md)
 section 2
 =========
 
-⚠️ nkiss relies on a specific archinstall configuration, it will not run otherwise
+nkiss relies on a specific archinstall configuration, it will not run otherwise
 
-| Section               | Option                                                                                                                                                               |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Disk configuration    | Partitioning > Default partition layout > btrfs > Use Subvolumes > Use compression <br><br>Disk Encryption > Encryption type > LUKS<br><br>Btrfs snapshots > Snapper |
-| Bootloader            | limine                                                                                                                                                               |
-| Authentication        | User account > Add a user (with sudo)                                                                                                                                |
-| Applications          | Audio > pipewire                                                                                                                                                     |
-| Network configuration | Copy ISO network config                                                                                                                                              |
-| Additional Packages   | git, curl                                                                                                                                                            |
+| Section               | Option                                                                                                                                                                                                                           |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Disk configuration    | Partitioning > Default partition layout > btrfs > Use Subvolumes  > Use compression <br><br>Disk encryption ><br>Encryption type > LUKS<br>Encryption password > (your own)<br>Partitions > (yours)<br>Btrfs snapshots > Snapper |
+| Bootloader            | limine                                                                                                                                                                                                                           |
+| Authentication        | User account > Add a user (with sudo)                                                                                                                                                                                            |
+| Applications          | Audio > pipewire                                                                                                                                                                                                                 |
+| Network configuration | Copy ISO network config                                                                                                                                                                                                          |
+| Additional Packages   | git, curl                                                                                                                                                                                                                        |
 
 Reboot once the installation is complete
 
-⚠️ Additionally nkiss will NOT run if:
+ Additionally nkiss will NOT run if:
 
 -	The system has BIOS instead of UEFI
 -	Is non-vanilla arch like CachyOS or Garuda
