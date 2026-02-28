@@ -59,7 +59,8 @@ git clone https//somelink
 
 Note that nkiss disables mkinitcpio hooks during the installation process, and re-enables them once complete. This is for the purpose of a faster installation. 
 
-mkinitcpio hooks are setup in `/etc/mkinitcpio.conf.d/nkiss_hooks.conf`
+mkinitcpio hooks are setup in `/etc/mkinitcpio.conf.d/nkiss_hooks.conf`:
+
 `HOOKS=(base udev plymouth keyboard autodetect microcode modconf kms keymap consolefont block encrypt filesystems fsck btrfs-overlayfs)`
 
 Most are standard and explained [in this arch wiki article](https://wiki.archlinux.org/title/Mkinitcpio#Hook_list) except for `plymouth` and `btrfs-overlays` ????
@@ -87,11 +88,13 @@ TIMELINE_LIMIT_MONTHLY="0"
 TIMELINE_LIMIT_YEARLY="0"
 ```
 1 snapshot per hour, at most 8 hours old
+
 1 snapshot per day, at most 7 days old
 
 weekly, monthly and yearly snapshots are disabled as we think those should be done intentionally, not automatically
 
 Lastly, `limine-snapper-sync` systemd service gets enabled for the Btrfs snapshots functionality using Snapper .
+
 `systemctl enable --now limine-snapper-sync.service`
 
 ## Plymouth 
