@@ -27,7 +27,13 @@ Hardware Specific Packages
 Additional Notes
 ----------------
 
-For nvidia GPUs we'll also run a bunch of services to ensure no freezez/crashes on suspend/resume.
+In case of an nvidia gpu, nkiss will also enable these:
+```
+sudo systemctl enable nvidia-suspend.service
+sudo systemctl enable nvidia-hibernate.service
+sudo systemctl enable nvidia-resume.service
+```
+to ensure no freezes/crashes happen on suspend/resume.
 
 Things to do after
 ------------------
