@@ -5,7 +5,7 @@ nkiss is mostly a minimal grab bag of preinstalled packages meant as a kickstart
 
 It leaves you with a system that's not supposed to be "complete" or "productive", that system will need tinkering to suit your needs, but it should take fewer steps to get there.
 
-Hardware setup is documented here [DRIVERS.md](docs/DRIVERS.md)
+
 
 Archinstall options 
 =========
@@ -38,6 +38,9 @@ Additional Packages/
 ├─ git
 ├─ curl
 </pre>
+
+Note that archinstall doesn't automatically setup Snapper with btrfs if you have multiple partitions, you'll have to set that up manually at some later point.
+
 Reboot once the installation is complete
 
  Additionally it's not recommended to run nkiss if:
@@ -50,7 +53,7 @@ Reboot once the installation is complete
 then git clone this
 
 ```shell
-git clone https//somelink
+git clone https://somelink
 ```
 
 # The system post-install
@@ -170,13 +173,8 @@ Note that `timeout` can be set to `0` in case you want limine to immediately cho
 
 ## Hardware Packages
 
-In case of an nvidia gpu, nkiss will also enable these:
-```
-sudo systemctl enable nvidia-suspend.service
-sudo systemctl enable nvidia-hibernate.service
-sudo systemctl enable nvidia-resume.service
-```
-to ensure no freezes/crashes happen on suspend/resume.
+Hardware setup is documented here [DRIVERS.md](docs/DRIVERS.md)
+
 
 
 
